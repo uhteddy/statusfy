@@ -7,3 +7,4 @@ exports.newIncident = require("./new-incident");
 exports.deleteIncident = require("./delete-incident");
 exports.updateIncident = require("./update-incident");
 exports.Statusfy = require("./statusfy");
+exports.addResponse = require("./add-response");
