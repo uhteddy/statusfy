@@ -47,7 +47,8 @@ const {
   start,
   newIncident,
   deleteIncident,
-  updateIncident
+  updateIncident,
+  addResponse
 } = require('@statusfy/core/lib')
 const sourceDir = path.resolve('.')
 
@@ -120,6 +121,13 @@ program
   .description(`Update an incident including translations.`)
   .action(() => {
     wrapCommand(updateIncident)(sourceDir, {})
+  })
+  
+program
+  .command('add-response')
+  .description(`Add a response with a tile and description to an incident`)
+  .action(() => {
+    wrapCommand(addResponse)(sourceDir, {})
   })
 
 // output help information on unknown commands
